@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    font-size: 60px;
 }
 html{
     scroll-behavior: smooth;
@@ -10,6 +11,7 @@ html{
 body{
     background: #080808;
     color: #fff;
+    font-size: 60px;
 }
 #header{
     width: 100%;
@@ -67,7 +69,7 @@ nav ul li a:hover::after{
 }
 .header-text h1 span{
     font-size: 60px;
-    color:#ff004f
+    color:#ff004f;
 }
 /* --------------------about-------------- */
 #about{
@@ -239,13 +241,13 @@ sub-title{
     transition: transform 0.5s;
 }
 .social-icons a:hover{
+    font-size: 60px;
     color: #ff004f;
     transform: translateY(-5px);
 }
 .btn.btn2{
-    margin-top: 80px;
+    margin-top: 30px;
     font-size: 60px;
-    color: #262626;
     display: inline-block;
     background: #ff004f;
 }
@@ -271,7 +273,7 @@ form .btn2{
 
 }
 .copyright{
-    font-size: 50px;;
+    font-size: 50px;
     width: 100%;
     text-align: center;
     padding: 25px 0;
@@ -279,17 +281,43 @@ form .btn2{
     font-weight: 300;
     margin-top: 20px;
 }
+.msg{
+    font-size: 60px;
+    color: #61b752;
+    margin-top: 30px;
+    margin-right: 30px;
+    font-size: 60px;
+    display: block;
+    flex-basis: 100px;
+
+}
 /*--------------css for small screens-------*/
 nav .fa-solid{
     display: none;
 }
-@media only screen and (max-with: 600px){
-    .header{
-        background-image: url(Newimages/anil.png.jpg);
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 50px;
+    }
+    #header{
+        background-image: url(Newimages/anilss.jpg);
     }
     .header-text{
         margin-top: 100%;
-        font-size: 30px;
+        font-size: 8px;
+    }
+    .header-text h1{
+        font-size: 15px;
+    }
+    .header-text h1 span{
+        font-size: 15px;
+        color:#ff004f;
+    }
+    nav ul li a{
+        color:#fff;
+        text-decoration: none;
+        font-size: 15px;
+        position: relative;
     }
     nav .fa-solid{
         display: block;
@@ -305,45 +333,239 @@ nav .fa-solid{
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        font-size: 15px;
     }
     nav ul li{
         display: block;
         margin: 25px;
+        font-size: 15px;
     }
     nav ul .fa-solid{
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
+        font-size: 15px;
     }
     .sub-title{
-        font-size: 40px;
+        font-size: 15px;
+        margin-bottom: 15px;
     }
     .about-col-1, .about-col-2{
         flex-basis: 100%;
+        font-size: 15px;
     }
     .about-col-1{
         margin-bottom: 30px;
+        font-size: 15px;
     }
     .about-col-2{
         font-size: 14px;
+        font-size: 15px;
+    }
+    .tab-titles{
+        display: flex;
+        margin: 10px 0 20px;
+        font-size: 15px;
+    }
+    .tab-para{
+        font-size: 15px;
     }
     .tab-links{
         font-size: 16px;
         margin-right: 20px;
     }
+    .tab-pro{
+        font-size: 15px;
+    
+    }
+    .tab-edu{
+        font-size: 15px;
+    
+    }
+
+
+    .tab-links::after{
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #ff004f;
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+        font-size: 60px;
+    }
+    .tab-links.active-link::after{
+        width: 50%;
+        font-size: 15px;
+    }
+    .tab-contents ul li{
+        font-size: 15px;
+        list-style: none;
+        margin: 10px 0;
+        font-size: 15px;
+    }
+    .tab-contents ul li span{
+        color: #b54769;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .tab-contents{
+        display: none;
+        font-size: 15px;
+        margin-bottom: -100px;
+    }
+    .tab-contents.active-tab{
+        display: block;
+        font-size: 15px;
+    }
+
+
+    /*----------projects-----------*/
+    #projects{
+        font-size: 15px;
+        padding: 30px 0;
+    }
+    .projects-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 40px;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    .projects{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        font-size: 13px;
+    }
+    .projects img{
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s;
+    
+    }
+    .layer{
+        width: 100%;
+        height: 0%;
+        background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        font-size: 14px;
+        transition: height 0.5s;
+    }
+    .layer h3{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .layer p{
+        font-size: 13px;;
+    }
+    .projects:hover img{
+        transform: scale(1.1);
+    }
+    .projects:hover .layer{
+        height: 100%;
+    }
+
+
+    .social-icons{
+        margin-top: 30px;
+        font-size: -10px;   
+    }
+    .social-icons a{
+        text-decoration: none;
+        margin-top: 5px;
+        margin-right: 5px;
+        color: #ababab;
+        display: inline-block;
+        transition: transform 0.5s;
+        font-size: 10px;
+    }
+    .social-icons a i{
+        font-size: 25px;
+    }
+    .social-icons a:hover{
+        color: #ff004f;
+        transform: translateY(-2.5px);
+    }
+
+    .contact-left{
+        font-size: 15px;
+        flex-basis: 10%;
+    }
+    .contact-left p{
+    font-size: 15px;
+    }
+    .contact-left p i{
+        color: #ff004f;
+        margin-right: 15px;
+        font-size: 15px;
+    }
+
+    .contact-right{
+        flex-basis: 10%;
+    }
     .contact-left, .contact-right{
         flex-basis: 100%;
+        font-size: 15px;
     }
     .copyright{
-        font-size: 14px;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        background: #262626;
+        font-weight: 300;
+        margin-top: 20px;
     }
-}
-#msg{
-    color: #61b752;
-    margin-top: 800px;
-    margin-right: 500px;
-    font-size: 80px;
-    display: block;
+    .copyright p{
+        font-size: 15px;
+    }
+    form input, form textarea{
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: #262626;
+        padding: 15px;
+        margin: 10px 0;
+        color: #fff;
+        font-size: 15px;
+        border-radius: 20px;
+    }
+    .btn.btn2{
+    margin-top: 10px;
+    font-size: 15px;
+    color: #262626;
+    display: inline-block;
+    background: #ff004f;
+    }
+    form .btn2{
+    padding: 7px 30px;
+    font-size: 15px;
+    margin-top: 10px;
+    cursor: pointer;
 
+    }
+    #msg{
+    color: #61b752;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: block;
+    flex-basis: 50%;
+    }
 }
